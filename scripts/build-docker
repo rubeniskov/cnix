@@ -1,0 +1,12 @@
+#!/bin/bash
+
+if [ -z $1 ]; then
+    echo >&2 "Error: image-nage parameter required"
+    echo >&2 "$0 <image-name>"
+    exit 1
+fi
+
+docker build --build-arg BUILD_DATE=`date -u +"%Y-%m-%dT%H:%M:%SZ"` \
+             --build-arg VCS_REF=`git rev-parse --short HEAD` \
+             --build-arg VERSION=`git describe --abbrev=0 --tag` \
+             -t $1 .

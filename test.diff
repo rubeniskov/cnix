@@ -1,0 +1,25 @@
+PROJECT_NAME
+ -> cnix
+PROJECT_VERSION
+ -> 0.0.1
+PROJECT_DIST_DIR
+ -> dist
+PROJECT_VC_REF
+ -> e611487
+PROJECT_GIT_REPO_PATH
+ -> github.com/rubeniskov/cnix
+GO_VERSION
+ -> 1.14.2
+GO_BIN
+ -> /usr/local/opt/go/libexec/bin/go
+GO_TARGETS
+ -> dist/cnix-0.0.1-darwin-386 dist/cnix-0.0.1-darwin-amd64 dist/cnix-0.0.1-linux-386 dist/cnix-0.0.1-linux-amd64 dist/cnix-0.0.1-linux-arm dist/cnix-0.0.1-linux-arm64
+GO_SRC
+ -> /Users/rubeniskov/Workspace/go/src
+DOCKER_BIN
+ -> /usr/local/bin/docker
+DOCKER_RUN_FLAGS
+ -> --rm --volume /Users/rubeniskov/Workspace/go/src:/go/src --volume /Users/rubeniskov/Workspace/cnix:/go/src/github.com/rubeniskov/cnix --workdir /go/src/github.com/rubeniskov/cnix
+DOCKER_BUILD_FLAGS
+ -> --build-arg GO_VERSION=1.14.2 --build-arg VERSION=0.0.1 --build-arg VC_REF=e611487
+make: Nothing to be done for `info'.
